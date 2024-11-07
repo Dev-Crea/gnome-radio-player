@@ -1,0 +1,15 @@
+{
+    "name": "gnome-radio-player",
+    "version": "1.0.0",
+    "description": "Gnome plugin to browse and listen to Ferarock radio stations.",
+    "main": "extension.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "VAILLANT Jeremy",
+    "sourceType": "module",
+    "license": "ISC",
+    "devDependencies": {
+        "prettier": "3.3.3"
+    }
+}

@@ -1,0 +1,43 @@
+.gnome-radio-player-popup-sub-menu {
+    width: 250px;
+    max-width: 250px;
+}
+
+.gnome-radio-player_box_menu {
+    width: 250px;
+    max-width: 250px;
+}
+
+StBoxLayout.gnome-radio-player-popup-loading-box {
+    spacing: 0.4em;
+    margin-top: 0.5em;
+    background-color: black;
+}
+
+.gnome-radio-player-ui_loading {
+    spacing: 0.4em;
+    margin-top: 0.5em;
+    background-color: rgba(0, 0, 255, 0.2);
+}
+
+.gnome-radio-player-box-ui_first_start {
+    padding: 5px;
+}
+
+.gnome-radio-player-box-ui_label_channel {
+    font-size: 20px;
+    font-style: italic;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.gnome-radio-player-box-ui_volume {
+    padding: 5px 0px;
+}
+
+.gnome-radio-player-box-ui_first_start,
+.gnome-radio-player-box-ui_volume {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
