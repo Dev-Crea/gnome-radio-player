@@ -16,15 +16,15 @@ jobs:
             # Required for private repositories by github/codeql-action/upload-sarif
             actions: read
         steps:
-            - name: Checkout
+            - name: Checkout code
               uses: actions/checkout@v4
 
-            - name: Install
+            - name: Install ESLint
               run: |
                   npm install eslint@^9.14.0
                   npm install @microsoft/eslint-formatter-sarif@3.1.0
 
-            - name: Lint
+            - name: Run ESLint
               env:
                 SARIF_ESLINT_IGNORE_SUPPRESSED: "true"
               run: npx eslint .
@@ -33,7 +33,7 @@ jobs:
                 --output-file eslint-results.sarif
               continue-on-error: true
 
-            - name: Report
+            - name: Upload analysis results to GitHub
               uses: github/codeql-action/upload-sarif@v3
               with:
                   sarif_file: eslint-results.sarif
