@@ -1,11 +1,7 @@
-import {Extension} from 'resource:///org/gnome/shell/extensions/extension.js';
-
 import GObject from 'gi://GObject';
 import St from 'gi://St';
 
 import * as PopupMenu from 'resource:///org/gnome/shell/ui/popupMenu.js';
-
-import * as Data from './data.js';
 
 import UIVolume from './ui_volume.js';
 import UILoading from './ui_loading.js';
@@ -24,7 +20,7 @@ const UIPopup = GObject.registerClass(
         static box_player_info;
         static box_default_start;
 
-        _init(player) {
+        _init() {
             super._init({
                 hover: false,
                 activate: false,

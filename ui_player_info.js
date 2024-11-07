@@ -1,15 +1,9 @@
-import {Extension} from 'resource:///org/gnome/shell/extensions/extension.js';
-
 import GObject from 'gi://GObject';
 import Gio from 'gi://Gio';
 import St from 'gi://St';
 import Clutter from 'gi://Clutter';
 
-import * as Main from 'resource:///org/gnome/shell/ui/main.js';
-
-import {player} from './extension.js';
 import {currentChannel} from './radio.js';
-
 import {path_asset} from './data.js';
 
 const UIPlayerInfo = GObject.registerClass(

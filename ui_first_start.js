@@ -1,7 +1,4 @@
-import {
-    Extension,
-    gettext as _,
-} from 'resource:///org/gnome/shell/extensions/extension.js';
+import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 
 import GObject from 'gi://GObject';
 import St from 'gi://St';
@@ -15,7 +12,7 @@ const UIFirstStart = GObject.registerClass(
         GTypeName: 'UIFirstStart',
     },
     class extends St.BoxLayout {
-        _init(player) {
+        _init() {
             super._init({
                 style_class: 'gnome-radio-player-box-ui_first_start',
                 vertical: true,

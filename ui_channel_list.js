@@ -1,7 +1,4 @@
-import {
-    Extension,
-    gettext as _,
-} from 'resource:///org/gnome/shell/extensions/extension.js';
+import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 
 import GObject from 'gi://GObject';
 import St from 'gi://St';

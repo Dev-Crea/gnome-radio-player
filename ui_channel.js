@@ -1,12 +1,8 @@
-import {Extension} from 'resource:///org/gnome/shell/extensions/extension.js';
-
 import GObject from 'gi://GObject';
 import St from 'gi://St';
 import Clutter from 'gi://Clutter';
 import Gio from 'gi://Gio';
 
-import * as Main from 'resource:///org/gnome/shell/ui/main.js';
-import * as MessageTray from 'resource:///org/gnome/shell/ui/messageTray.js';
 import * as PopupMenu from 'resource:///org/gnome/shell/ui/popupMenu.js';
 
 import {player} from './extension.js';
@@ -50,7 +46,7 @@ const UIChannel = GObject.registerClass(
             box_title.add_child(channel_title);
         }
 
-        activate(event) {
+        activate(_event) {
             player.stop();
             player.setChannel(this.channel);
             player.play();

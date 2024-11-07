@@ -2,7 +2,6 @@ import {Extension} from 'resource:///org/gnome/shell/extensions/extension.js';
 
 import Gio from 'gi://Gio';
 import GLib from 'gi://GLib';
-import Shell from 'gi://Shell';
 
 const FILE_NAME = 'configuration.json';
 const NAME_APPLICATION = 'gnome-radio-player@dev-crea.com';
@@ -14,7 +13,7 @@ function _readConfiguration() {
         FILE_NAME,
     ]);
     const file = Gio.File.new_for_path(filepath);
-    const [ok, contents, etag] = file.load_contents(null);
+    const [_ok, contents, _etag] = file.load_contents(null);
     const decoder = new TextDecoder('utf-8');
 
     return JSON.parse(decoder.decode(contents));
@@ -47,8 +46,6 @@ async function _writeConfiguration(replace) {
 export function getLastChannel() {
     return _readConfiguration().last_channel;
 }
-
-export function setLastChannel(index) {}
 
 export function getVolume() {
     return _readConfiguration().volume;

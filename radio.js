@@ -1,13 +1,4 @@
 import Gst from 'gi://Gst';
-import GstAudio from 'gi://GstAudio';
-
-import Gio from 'gi://Gio';
-import GObject from 'gi://GObject';
-import St from 'gi://St';
-import Clutter from 'gi://Clutter';
-
-import * as Main from 'resource:///org/gnome/shell/ui/main.js';
-import * as MessageTray from 'resource:///org/gnome/shell/ui/messageTray.js';
 
 import UIPopup from './ui_popup.js';
 import UIPlayerInfo from './ui_player_info.js';
@@ -29,8 +20,8 @@ export const RadioPlayer = class RadioPlayer {
 
         let bus = this.playbin.get_bus();
         bus.add_signal_watch();
-        bus.connect('message', (bus, msg) => {
-            if (msg != null) this._onMessageReceived(msg);
+        bus.connect('message', (_bus, msg) => {
+            if (msg !== null) this._onMessageReceived(msg);
         });
         this.onError = null;
     }

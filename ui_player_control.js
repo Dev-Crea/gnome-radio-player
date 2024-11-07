@@ -1,13 +1,7 @@
-import {Extension} from 'resource:///org/gnome/shell/extensions/extension.js';
-
 import GObject from 'gi://GObject';
 import St from 'gi://St';
 import Clutter from 'gi://Clutter';
 
-import * as Main from 'resource:///org/gnome/shell/ui/main.js';
-import * as MessageTray from 'resource:///org/gnome/shell/ui/messageTray.js';
-
-import * as Radio from './radio.js';
 import {player} from './extension.js';
 import {currentChannel} from './radio.js';
 import {setFavorite} from './data.js';

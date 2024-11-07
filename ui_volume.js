@@ -55,18 +55,18 @@ const UIVolume = GObject.registerClass(
             } else {
                 this.volume_slider.value = getVolume();
             }
-            player.setMute(getVolume() == 0);
+            player.setMute(getVolume() === 0);
             this.setVolIcon(getVolume());
         }
 
-        setVolume(slider, event) {
+        setVolume(slider, _event) {
             player.setVolume(slider.value);
             setVolume(slider.value);
             this.setVolIcon(slider.value);
         }
 
         setVolIcon(vol) {
-            if (vol == 0)
+            if (vol === 0)
                 this.mute_icon.set_icon_name('audio-volume-muted-symbolic');
             else if (vol < 0.3)
                 this.mute_icon.set_icon_name('audio-volume-low-symbolic');
