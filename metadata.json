@@ -4,7 +4,7 @@
     "shell-version": ["45", "46", "47"],
     "url": "http://github.com/Dev-Crea/gnome-radio-player",
     "uuid": "gnome-radio-player@dev-crea.com",
-    "version": 1,
+    "version": 0.1,
     "gettext-domain": "gnome-radio-player@dev-crea.com",
     "settings-schema": "org.gnome.shell.extensions.gnome-radio-player"
 }

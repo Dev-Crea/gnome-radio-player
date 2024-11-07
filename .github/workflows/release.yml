@@ -1,11 +1,12 @@
 name: Release
 
 on:
-    push:
-        branches: ['main']
+  push:
+    branches: ['dev']
 
 jobs:
   release:
+    name: Package and upload extension
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
