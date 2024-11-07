@@ -16,3 +16,4 @@ gnome-extensions pack --podir=po .
 ## Links
 
 * https://developer.gnome.org/hig/index.html
+* https://gjs.guide/
